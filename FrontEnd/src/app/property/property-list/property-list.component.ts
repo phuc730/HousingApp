@@ -33,6 +33,27 @@ export class PropertyListComponent implements OnInit {
       Type: 'House',
       Price: 30000
     },
+
+    {
+      Id: 4,
+      Name: 'Red House',
+      Type: 'House',
+      Price: 40000
+    },
+
+    {
+      Id: 5,
+      Name: 'Purple House',
+      Type: 'House',
+      Price: 50000
+    },
+
+    {
+      Id: 6,
+      Name: 'Yellow House',
+      Type: 'House',
+      Price: 60000
+    },
   ]
 
 }

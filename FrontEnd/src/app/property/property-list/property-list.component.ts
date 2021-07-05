@@ -12,4 +12,27 @@ export class PropertyListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  properties: Array<any> = [
+    {
+      Id: 1,
+      Name: 'Vinpearl House',
+      Type: 'House',
+      Price: 10000
+    },
+
+    {
+      Id: 2,
+      Name:'White House',
+      Type: 'House',
+      Price: 20000
+    },
+
+    {
+      Id: 3,
+      Name: 'Black House',
+      Type: 'House',
+      Price: 30000
+    },
+  ]
+
 }

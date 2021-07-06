@@ -1,43 +1,55 @@
 [
   {
     "Id": 1,
+    "SellRent": 2,
     "Name": "Vinpearl House",
     "Type": "House",
-    "Price": 10000
+    "Price": 10000,
+    "Image": "p1"
   },
 
   {
     "Id": 2,
+    "SellRent": 2,
     "Name":"White House",
     "Type": "House",
-    "Price": 20000
+    "Price": 20000,
+    "Image": "p2"
   },
 
   {
     "Id": 3,
+    "SellRent": 1,
     "Name": "Black House",
     "Type": "House",
-    "Price": 30000
+    "Price": 30000,
+    "Image": "p3"
   },
 
   {
     "Id": 4,
+    "SellRent": 1,
     "Name": "Red House",
     "Type": "House",
-    "Price": 40000
+    "Price": 40000,
+    "Image": "p4"
   },
 
   {
     "Id": 5,
+    "SellRent": 1,
     "Name": "Purple House",
     "Type": "House",
-    "Price": 50000
+    "Price": 50000,
+    "Image": "p5"
   },
 
   {
     "Id": 6,
+    "SellRent": 1,
     "Name": "Yellow House",
     "Type": "House",
-    "Price": 60000
+    "Price": 60000,
+    "Image": "p6"
   }
 ]

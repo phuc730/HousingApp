@@ -1,5 +1,39 @@
-<p>
-  add-property works!
-  <button (click)= "onBack()" class="btn btn-primary" >Back</button>
-
-</p>
+<div class="card">
+  <div class="card-header">
+      <h3 style="text-align: center;">Add new property</h3>
+  </div>
+  <div class="card-body">
+      <form (ngSubmit)='onSubmit()' #Form="ngForm">
+          <div class="form-group col-12">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" placeholder="Name"
+                 ngModel name="Name" #propName="ngModel" required minlength="5">
+              <span *ngIf="!propName.valid && propName.touched" class="error-block">
+                <span *ngIf="propName.errors?.required">Please provide name</span>
+                <span *ngIf="propName.errors?.minlength">Name must be atleast 5 char long</span>
+              </span>
+          </div>
+          <div class="form-group col-12">
+              <label for="type">Type</label>
+              <input type="text" class="form-control" placeholder="Type"
+               #propType="ngModel" ngModel name="Type" required  minlength="5">
+              <span *ngIf="!propType.valid && propType.touched" class="error-block">
+                <span *ngIf="propType.errors?.required">Please provide type</span>
+                <span *ngIf="propType.errors?.minlength">Name must be atleast 5 char long</span>
+              </span>
+          </div>
+          <div class="form-group col-12">
+              <label for="price">Price</label>
+              <input type="number" class="form-control" placeholder="Price" #propPrice="ngModel" ngModel name="Price" required>
+              <span *ngIf="!propPrice.valid && propPrice.touched" class="error-block">
+                <span *ngIf="propPrice.errors?.required">Please provide price</span>
+              </span>
+          </div>
+          <div class="form-group col-12">
+            <br>
+            <button [disabled]="!Form.valid" type="submit" class="btn btn-primary m-2">Save</button>
+            <button type="reset" class=" btn btn-success">Reset</button>
+         </div>
+      </form>
+  </div>
+</div>

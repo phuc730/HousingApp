@@ -1,14 +1,19 @@
 <div class="row">
   <div class="col-6 m-auto">
     <div class="card m-auto">
-      <div class="card-header">
+      <div class="card-header" style="background-color: #0d6efd; color: white;">
         <h3 style="text-align: center;">Register</h3>
       </div>
       <div class="card-body">
         <form [formGroup]="registerationForm" (ngSubmit)="onSubmit()">
           <div class="form-group col-12">
             <label for="name">Name</label>
-            <input type="text" class="form-control" formControlName="userName" placeholder="Name" >
+            <div class="input-icons">
+              <i *ngIf="!userName?.valid &&
+              (userName?.touched || userSubmit)" class="fas fa-exclamation-circle icon"></i>
+              <input type="text" class="form-control" formControlName="userName"
+              [ngClass]="{'error-block': (userName.errors && userSubmit)}" placeholder="Name" >
+            </div>
             <span *ngIf="!userName?.valid &&
             (userName?.touched || userSubmit)" class="error-block">
               Please provide Name!
@@ -16,33 +21,55 @@
           </div>
           <div class="form-group col-12">
             <label for="email">Email</label>
-            <input type="text" class="form-control" formControlName="email" placeholder="Email" >
+            <div class="input-icons">
+              <i *ngIf="!email?.valid &&
+              (email?.touched || userSubmit)" class="fas fa-exclamation-circle icon"></i>
+              <input type="text" class="form-control" formControlName="email"
+              [ngClass]="{'error-block': (email.errors && userSubmit)}" placeholder="Email" >
+            </div>
             <span *ngIf="!email?.valid &&
             (email?.touched || userSubmit)" class="error-block">
               <span *ngIf="email.hasError('required')">Please provide Email</span>
               <span *ngIf="email.hasError('email')">Please enter the correct format email! <br>Example:abc@gmail.com</span>
             </span>
           </div>
-          <div class="form-group col-12">
+          <div class="row">
+          <div class="form-group col-6">
             <label for="password">Password</label>
-            <input type="password" class="form-control" formControlName="password" placeholder="Password" >
+            <div class="input-icons">
+              <i *ngIf="!password?.valid &&
+              (password?.touched || userSubmit)" class="fas fa-exclamation-circle icon-col6"></i>
+              <input type="text" class="form-control" formControlName="password"
+              [ngClass]="{'error-block': (password.errors && userSubmit)}" placeholder="Password" >
+            </div>
             <span *ngIf="!password?.valid &&
             (password?.touched || userSubmit)" class="error-block">
               <span *ngIf="password.hasError('required')">Please provide Password</span>
               <span *ngIf="password.hasError('minlength')">Password must be atleast 8 char long</span>
             </span>
           </div>
-          <div class="form-group col-12">
+          <div class="form-group col-6">
             <label for="confirmPassword">Confirm Password</label>
-            <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Confirm Password" >
+            <div class="input-icons">
+              <i *ngIf="!confirmPassword?.valid &&
+              (confirmPassword?.touched || userSubmit)" class="fas fa-exclamation-circle icon-col6"></i>
+              <input type="text" class="form-control" formControlName="confirmPassword"
+              [ngClass]="{'error-block': (confirmPassword.errors && userSubmit)}" placeholder="Confirm Password" >
+            </div>
             <span *ngIf="!confirmPassword.valid &&
             (confirmPassword?.touched || userSubmit)" class="error-block">
               <span *ngIf="confirmPassword.hasError('confirmedValidator')">Password is not mached</span>
             </span>
           </div>
+          </div>
           <div class="form-group col-12">
             <label for="mobile">Mobile</label>
-            <input type="text" class="form-control" formControlName="mobile" placeholder="Mobile" >
+            <div class="input-icons">
+              <i *ngIf="!mobile?.valid &&
+              (mobile?.touched || userSubmit)" class="fas fa-exclamation-circle icon"></i>
+              <input type="text" class="form-control" formControlName="mobile"
+              [ngClass]="{'error-block': (mobile.errors && userSubmit)}" placeholder="Mobile" >
+            </div>
             <span *ngIf="!mobile.valid &&
             (mobile?.touched || userSubmit)" class="error-block">
               <span *ngIf="mobile.hasError('required')">Please provide Mobile</span>

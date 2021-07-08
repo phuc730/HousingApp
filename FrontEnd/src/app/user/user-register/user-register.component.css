@@ -4,4 +4,31 @@
 
 .error-block{
   color: red;
+  border-color: red;
 }
+
+
+.input-icons i {
+  position: absolute;
+}
+
+.input-icons {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.icon {
+  padding: 11px;
+  min-width: 40px;
+  margin-left: 83%;
+  color: red;
+}
+
+.icon-col6 {
+  padding: 11px;
+  min-width: 40px;
+  margin-left: 34%;
+  color: red;
+}
+
+

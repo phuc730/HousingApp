@@ -1,0 +1,47 @@
+.ng-invalid.ng-touched{
+  border-color: red;
+}
+
+.error-block{
+  color: red;
+  border-color: red;
+}
+
+.input-icons i {
+  position: absolute;
+}
+
+.input-icons {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.icon {
+  padding: 11px;
+  min-width: 40px;
+  margin-left: 83%;
+  color: red;
+}
+
+.icon-col6 {
+  padding: 11px;
+  min-width: 40px;
+  margin-left: 34%;
+  color: red;
+}
+
+.btn-group > label[ng-reflect-btn-radio]{
+  border-radius: 44px;
+  padding: 0px 15px;
+  line-height: 30px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 10px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}

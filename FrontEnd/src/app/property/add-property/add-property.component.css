@@ -5,3 +5,11 @@
 .error-block{
   color: red;
 }
+
+.photo-control{
+  min-height: 300px;
+  text-align: center;
+  border: 1px dashed blue;
+  margin: 5px;
+  vertical-align: middle;
+}

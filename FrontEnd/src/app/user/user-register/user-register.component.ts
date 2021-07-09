@@ -52,7 +52,7 @@ export class UserRegisterComponent implements OnInit {
       this.userService.addUser(this.userData());
       this.registerationForm.reset();
       this.userSubmit = false;
-      this.alertifyjs.success("Successfully registered !")
+      this.alertifyjs.success("Successfully registered !");
     }
     else{
       this.alertifyjs.error("Fail registered !")

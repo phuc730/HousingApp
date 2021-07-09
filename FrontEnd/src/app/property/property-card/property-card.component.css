@@ -1,3 +1,11 @@
+.card{
+  min-height: 400px;
+}
+
+.card-body h1{
+  font-family: fantasy;
+  color: #0069d9;
+}
 
 .card-img-wrapper{
   overflow: hidden;
@@ -33,4 +41,9 @@
 
 .animate{
   transition: all 0.3s ease-in-out;
+}
+
+.font-hightlight{
+  color: red;
+  font-style: italic;
 }

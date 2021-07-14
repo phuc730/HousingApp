@@ -26,17 +26,17 @@ export class AddPropertyComponent implements OnInit {
   purnishTypes: Array<string> = ['Fully', 'Semi', 'Unfurnished'];
   locationToMoves: Array<string> = ['East', 'West', 'South', 'North'];
   propertyView: IPropertyBase = {
-    Id: null,
-    Name: null,
-    Price: null,
-    SellRent: null,
+    Id: 0,
+    Name: "",
+    Price: 0,
+    SellRent: 0,
     Image: "prop-1",
-    BHK: null,
-    BuiltArea: null,
-    City: null,
-    FType: null,
-    PType: null,
-    RTM: null
+    BHK: 0,
+    BuiltArea: 0,
+    City: "",
+    FType: "",
+    PType: "",
+    RTM: 0
   };
   constructor(private route : Router,
               private fb: FormBuilder,
@@ -147,7 +147,7 @@ export class AddPropertyComponent implements OnInit {
     this.property.AOP = this.AOP.value;
     this.property.Gated = this.Gated.value;
     this.property.MainEntrance = this.MainEntrance.value;
-    this.property.Possession = this.PossessionOn.value;
+    this.property.Posession = this.Posession.value;
     this.property.Description = this.Description.value;
     this.property.PostedOn = new Date().toString();
     this.property.Image = "prop-1";
@@ -247,8 +247,8 @@ export class AddPropertyComponent implements OnInit {
     return this.OtherInfo.controls.RTM as FormControl;
   }
 
-  get PossessionOn() {
-    return this.OtherInfo.controls.PossessionOn as FormControl;
+  get Posession() {
+    return this.OtherInfo.controls.Posession as FormControl;
   }
 
   get AOP() {

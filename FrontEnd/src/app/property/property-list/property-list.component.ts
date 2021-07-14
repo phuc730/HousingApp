@@ -19,7 +19,7 @@ export class PropertyListComponent implements OnInit {
     if(this.route.snapshot.url.toString()){
       this.SellRent = 2;
     }
-    this.housingService.getListOfProperties(this.SellRent).subscribe(
+    this.housingService.getListOfProperties(2).subscribe(
       data => {
         this.properties = data;
         console.log(data);
